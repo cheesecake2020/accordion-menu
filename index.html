@@ -1,0 +1,86 @@
+﻿<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>6-01_menu</title>
+    <link href="../../_common/images/favicon.ico" rel="shortcut icon">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+1p:400,500" rel="stylesheet">
+    <link href="../../_common/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    
+
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>開閉するナビゲーションメニュー</h1>
+            <h2>アコーディオンメニュー</h2>
+        </div><!-- /.container -->
+    </header>
+    <main>
+        <div class="container">
+            <div class="box">
+                <button class="accordion">無料</button>
+                <div class="accordion-content">
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                </div>
+            </div>
+            <div class="box">
+                <button class="accordion ">基本プラン</button>
+                <div class="accordion-content">
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                </div>
+            </div>
+            <div class="box">
+                <button class="accordion">プレミアム</button>
+                <div class="accordion-content">
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                    <p>A. LINE公式アカウントの利用料金は別料金となります。本サービスのご利用には別途LINEへの直接のお申込みが必要です。メッセージの配信数によってプランが異なります。</p>
+                </div>
+            </div>
+        </div><!-- /.container -->
+    </main>
+    <footer>
+        <div class="container">
+            <p>JavaScript Samples</p>
+        </div><!-- /.container -->
+    </footer>
+    
+    <script>
+        'use strict';
+        // アコーディオンする要素の取得
+        const accordions = document.getElementsByClassName("accordion");
+
+        // すべてのアコーディオンを取得するためfor文
+
+        for(var i=0; i < accordions.length; i++){
+            // クリックされたら
+            accordions[i].onclick = function(){
+                // プラス・マイナス切り替え
+                this.classList.toggle('is-open');
+                // 次の要素の取得
+                const content = this.nextElementSibling;
+                // 
+                if(content.style.maxHeight){
+                  
+                    content.style.maxHeight = null;
+                }else{
+                    content.style.maxHeight = content.scrollHeight + "px";
+                   
+
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>
